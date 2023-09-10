@@ -1,0 +1,15 @@
+version: "3.0"
+
+services:
+  fe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        FRONTEND_URI: https://github.com/davidbo6omolov/Hackaton-ipsa.git
+    image: iasa-hackaton:latest
+    restart: unless-stopped
+    expose:
+      - 80
+    ports:
+      - "20080:80"
