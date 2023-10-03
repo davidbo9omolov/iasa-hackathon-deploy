@@ -32,7 +32,7 @@ down:                                   ## make down - Destroy docker conainer
 	docker-compose down
 
 up:                                     ## make up - Create docker continer
-	docker-compose up -d --force-recreate fe
+	docker-compose up -d --build --force-recreate fe
 
 run:                                    ## make run
 	make up
